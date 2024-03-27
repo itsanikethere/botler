@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="Botler" status="INFO" strict="true">
+    <Appenders>
+        <Console name="Console Appender">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="logs/botler.log" filePattern="logs/botler-%d{dd-MM-yyyy}.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <SizeBasedTriggeringPolicy size="100 MB"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console Appender" level="ALL"/>
+            <AppenderRef ref="RollingFile" level="ERROR"/>
+        </Root>
+    </Loggers>
+</Configuration>
