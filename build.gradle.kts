@@ -11,12 +11,12 @@ version = "1.0.0"
 repositories {
     mavenCentral()
     maven {
-        setUrl("https://m2.dv8tion.net/releases")
+        setUrl("https://jitpack.io")
     }
 }
 
 dependencies {
-    implementation("com.sedmelluq:lavaplayer:1.3.77")
+    implementation("com.github.devoxin:lavaplayer:1.8.0")
     implementation("org.javacord:javacord:3.8.0")
     implementation("org.slf4j:slf4j-api:2.0.9")
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j2-impl:2.22.0")
